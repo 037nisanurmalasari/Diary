@@ -1,0 +1,72 @@
+/* BODY & BACKGROUND */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff70b2, #ffb6d5);
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* CANVAS FULL SCREEN */
+#bubbleCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* CONTAINER */
+.container {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    max-width: 380px;
+    margin: 20px auto;
+    background: #ffc0e8;
+    padding: 22px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 12px 30px rgba(255,95,162,0.55);
+    border: 2px solid rgba(255,95,162,0.3);
+}
+
+/* FORM ELEMENTS */
+label { display: block; margin-top: 10px; }
+input, textarea, button { width: 100%; box-sizing: border-box; margin-top: 4px; padding: 10px; border-radius: 10px; border: none; }
+textarea { resize: vertical; }
+
+/* BUTTON */
+button {
+    margin-top: 15px;
+    background: #ff5fa2;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+button:active { background: #ff3d81; transform: scale(1.02); }
+
+/* MOOD */
+.mood-bubble label {
+    background: #ffd0e6;
+    padding: 10px;
+    border-radius: 25px;
+    display: block;
+    margin-top: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.mood-bubble input { display: none; }
+.mood-bubble label.active {
+    background: #ff5fa2;
+    color: white;
+    transform: scale(1.08);
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 480px) {
+    .container { margin: 15px; padding: 18px; }
+}
